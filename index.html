@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Records Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1>Records Dashboard</h1>
+
+        <!-- Form for CSV import -->
+        <form id="csvForm">
+            <input type="file" id="csvFileInput" accept=".csv">
+            <button type="button" onclick="importCSV()">Import CSV</button>
+            <button onclick="exportToPDF()">Export to PDF</button>
+            </form>
+
+
+        <div id="errorMessage"></div>
+
+
+        <table id="studentTable">
+
+            <thead>
+
+            </thead>
+
+            <tbody id="tableBody">
+
+                <tr id="uniqueKey1">
+                    <td>Column 1 Data</td>
+                    <td>Column 2 Data</td>
+
+                    <td>
+                        <button class="btn btn-success" onclick="editRecord('uniqueKey1')">Edit</button>
+                        <button class="btn btn-success" onclick="deleteRecord('uniqueKey1')">Delete</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+
+
+
+        <div id="editForm" style="display: none;">
+            <input type="hidden" id="editRecordKey">
+            <form id="editRecordForm">
+                <!-- Inputs for each column will be dynamically added here -->
+            </form>
+        </div>
+    </div>
+
+
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+   
+
+
+
+
+</body>
+
+</html>
