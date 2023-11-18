@@ -20,6 +20,10 @@ function sanitizeKey(key) {
   return key.replace(/[\.\#\/\$\[\]]/g, '_').trim();
 }
 
+
+
+
+//function for import CSV file
 function importCSV() {
   const fileInput = document.getElementById('csvFileInput');
   const file = fileInput.files[0];
