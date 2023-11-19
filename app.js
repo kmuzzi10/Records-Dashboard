@@ -95,6 +95,8 @@ function importCSV() {
 }
 
 
+//function for display
+
 function displayStudentRecords() {
   const tableBody = document.getElementById('tableBody');
   tableBody.innerHTML = '';
