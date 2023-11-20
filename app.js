@@ -131,6 +131,8 @@ function displayStudentRecords() {
   });
 }
 
+
+//function for show edit form
 function showEditForm() {
   const editForm = document.getElementById('editForm');
   editForm.style.display = 'block';
